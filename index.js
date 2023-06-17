@@ -13,10 +13,10 @@ app.use(cors());
 app.use(express.json())
 
 const port = 9000;
-app.use("/",(req,res)=>{
+app.get("/",(req,res)=>{
     res.json({message:"hello from express"})
 })
-app.use('/api',(req,res)=>{
+app.get('/api',(req,res)=>{
     res.json({message:"hello from api"})
 })
 // app.use('/api/user',mainRoute)
