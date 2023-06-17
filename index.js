@@ -17,7 +17,7 @@ app.use("/",(req,res)=>{
     res.json({message:"hello from express"})
 })
 app.use('/api',(req,res)=>{
-    res.send('this is the api')
+    res.json({message:"hello from api"})
 })
 // app.use('/api/user',mainRoute)
 
