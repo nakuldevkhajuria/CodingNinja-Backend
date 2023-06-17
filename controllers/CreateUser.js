@@ -1,7 +1,9 @@
-const asyncHandler = require('express-async-handler')
-const UserModel = require('../models/UserModel')
-const { generateToken } = require("../config/jwtoken.js");
-
+// const asyncHandler = require('express-async-handler')
+import asyncHandler from 'express-async-handler'
+// const UserModel = require('../models/UserModel')
+import UserModel from '../models/UserModel.js'
+// const { generateToken } = require("../config/jwtoken.js");
+import { generateToken } from '../config/jwtoken.js';
 
 const createUser = asyncHandler(async (req, res) => {
     const email = req.body.email;
@@ -49,4 +51,5 @@ const loginUser = asyncHandler(
     }
 )
 
-module.exports={ createUser,loginUser}
+// module.exports={ createUser,loginUser}
+export {createUser,loginUser}
